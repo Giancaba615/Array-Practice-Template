@@ -57,8 +57,9 @@ namespace ArrayPractice
             }
 
 
-            //5. Determine and display the largest value in array 1          
-            //int max = 0;
+            //5. Determine and display the largest value in array 1
+            matchOutput.Text = "";
+            int max = 0;
 
 
 
