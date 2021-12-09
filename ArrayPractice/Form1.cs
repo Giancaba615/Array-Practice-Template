@@ -60,33 +60,60 @@ namespace ArrayPractice
             //5. Determine and display the largest value in array 1
             matchOutput.Text = "";
             int max = 0;
+           
+
+             max = array1.Max();
+
+            maxOutput.Text = $"{max}";
+
+
 
 
 
             //6. Determine and display the average of all values in array 1
-          //  double sum = 0;
-           // double average = 0;
+            averageOutput.Text = "";
+            double sum = 0;
+            double average = 0; 
+            for (int i = 0; i < array1.Length; i++)
+            {
+                sum += array1[i];
+                
+            }
+
+            average = sum / array1.Length;
+            averageOutput.Text = $"{average}";
 
 
             //7. Determine and display the sum of all even values in array 1
             evenOutput.Text = "";
-            //if ( array1 =  )
+
+          
             int sumEven = 0;
             for (int i = 0; i < array1.Length; i++)
             {
-                //if ()
+                int temporary = array1[i];
+                if (temporary % 2 == 0)
+                {
+                    sumEven += temporary;
+                }
+                   
             }
             evenOutput.Text = $"{sumEven}";
 
 
             //8. Determine and display the number of 3s in array 1
-            threeOutput.Text = "3";
+            threeOutput.Text = "";
             int numThrees = 0;
             for (int i = 0; i < array1.Length; i++)
             {
-               
+               int temp = array1[i];
+                if (3 == temp)
+                {
+                    numThrees++;
+                }
+
             }
-            
+            threeOutput.Text = $"{numThrees}";
 
 
             //9. Determine and display how many matching numbers in matching positions between the 2 arrays there are
@@ -94,9 +121,14 @@ namespace ArrayPractice
              int samePosition = 0;
              for (int i = 0; i < array2.Length; i++)
             {
-
+                int temp2 = array2[i];
+                int temp1 = array1[i];
+                if (temp2 == temp1)
+                {
+                    samePosition++;
+                }
             }
-
+            matchOutput.Text = $"{samePosition}";
 
 
             // ----------------------
